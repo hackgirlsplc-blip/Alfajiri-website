@@ -14,6 +14,7 @@
 }
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 body {
   margin: 0;
@@ -806,17 +807,6 @@ footer .brand {
 footer .brand-mark {
   height: 26px;
   width: 100%;
-}
-footer nav {
-  display: flex;
-  gap: 26px;
-}
-footer nav a {
-  font-size: 14px;
-  color: var(--slate);
-}
-footer nav a:hover {
-  color: var(--ink);
 }
 footer .copy {
   font-size: 13px;
