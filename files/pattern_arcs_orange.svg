@@ -1,0 +1,10 @@
+<svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="arcs" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M -5 55 A 25 25 0 0 1 55 55" fill="none" stroke="#FFFFFF" stroke-width="3" opacity="0.5"/>
+      <path d="M 25 55 A 25 25 0 0 1 85 55" fill="none" stroke="#FFFFFF" stroke-width="3" opacity="0.5"/>
+    </pattern>
+  </defs>
+  <rect width="240" height="240" fill="#F28717"/>
+  <rect width="240" height="240" fill="url(#arcs)"/>
+</svg>

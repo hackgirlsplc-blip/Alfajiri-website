@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services | Alfajiri</title>
+    <meta
+      name="description"
+      content="Software development, data analytics, data engineering, architecture and cybersecurity; five disciplines delivered by one team at Alfajiri Innovations LTD."
+    />
+    <meta name="author" content="Alfajiri Innovations LTD" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#0b0e12" />
+    <link rel="canonical" href="https://alfajiri.co/services.html" />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="files/alfajiri-icon-orange-square.png"
+    />
+    <link rel="apple-touch-icon" href="files/alfajiri-icon-orange-square.png" />
+
+    <!-- Open Graph / Facebook, LinkedIn, etc. -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Alfajiri" />
+    <meta property="og:url" content="https://alfajiri.co/services.html" />
+    <meta property="og:title" content="Services | Alfajiri" />
+    <meta
+      property="og:description"
+      content="Software development, data analytics, data engineering, architecture and cybersecurity; five disciplines delivered by one team."
+    />
+    <meta property="og:image" content="https://alfajiri.co/files/og-hero.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Services | Alfajiri" />
+    <meta
+      name="twitter:description"
+      content="Software development, data analytics, data engineering, architecture and cybersecurity; five disciplines delivered by one team."
+    />
+    <meta
+      name="twitter:image"
+      content="https://alfajiri.co/files/og-hero.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site">
+      <div class="nav">
+        <a href="index.html#top" class="brand" aria-label="Alfajiri home">
+          <span class="brand-mark">
+            <img
+              src="files/alfajiri-logo-transparent.png"
+              alt=""
+              aria-hidden="true"
+            />
+          </span>
+        </a>
+        <nav class="links">
+          <a href="index.html#services" aria-current="page">Services</a>
+          <a href="index.html#work">Work</a>
+          <a href="index.html#approach">Approach</a>
+          <a href="about.html">About</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+        <div class="nav-cta">
+          <a href="index.html#contact" class="btn btn-ghost">Contact</a>
+          <a href="index.html#contact" class="btn btn-primary"
+            >Start a project</a
+          >
+        </div>
+        <button class="menu-toggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- ALFA-ASSETS INTRO -->
+      <section class="alfa-intro">
+        <div class="wrap">
+          <span class="eyebrow">Featured project</span>
+          <h2>Alfa-Assets: one project, five disciplines</h2>
+          <p>
+            Alfa-Assets is an enterprise asset lifecycle platform we
+            designed and built to work through one real problem, tracking
+            physical assets from acquisition to disposal, across the full
+            stack of skills that problem actually requires. Rather than
+            five separate portfolio pieces, this is one system, and each
+            part of it was a deliberate exercise in a different
+            discipline.
+          </p>
+          <p>Below is how the same project breaks down.</p>
+          <div class="showcase-media">
+            <div class="frame-bar" aria-hidden="true">
+              <span></span><span></span><span></span>
+            </div>
+            <img
+              src="files/asset.png"
+              alt="Executive dashboard from the Alfa-Assets platform, showing book value by country, assets by category and maintenance cost trends"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- SOFTWARE DEVELOPMENT -->
+      <section class="service-detail" id="software-development">
+        <div class="wrap">
+          <div class="service-detail-intro">
+            <img
+              class="service-detail-icon"
+              src="files/icon_software_development.svg"
+              alt=""
+              aria-hidden="true"
+              loading="lazy"
+            />
+            <div class="service-detail-num">01</div>
+            <h2>Software Development</h2>
+            <p class="service-detail-lede">
+              Full-stack products built for scale; from first prototype to a
+              release your users depend on every day. We work across web,
+              mobile and backend systems, integrating cleanly with whatever
+              you already run.
+            </p>
+            <ul class="service-detail-list">
+              <li>Product &amp; platform engineering</li>
+              <li>API &amp; systems integration</li>
+              <li>Cloud-native backends</li>
+              <li>Ongoing maintenance &amp; support</li>
+            </ul>
+          </div>
+          <div class="discipline-proof">
+            <span class="eyebrow">Alfa-Assets in practice</span>
+            <h3>Building the system that runs the lifecycle.</h3>
+            <p>
+              Alfa-Assets is a working application, not a set of mockups: a
+              React frontend with a real component and state model, backed
+              by a FastAPI service implementing the asset lifecycle as an
+              explicit state machine: Draft, Assigned, Under Maintenance,
+              Retired, Disposed, and the exception states (Lost, Damaged,
+              Quarantined) alongside them. The transfer and approval
+              workflow is enforced in code, not just drawn on a screen.
+            </p>
+            <span class="proof-label">What this shows:</span>
+            <ul class="service-detail-list">
+              <li>A documented, versioned REST API (OpenAPI spec)</li>
+              <li>
+                A lifecycle state machine with enforced transitions and
+                audit hooks
+              </li>
+              <li>Automated tests and a CI/CD pipeline, not manual QA</li>
+              <li>A design system built for the subject matter, not a template</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- DATA ANALYTICS -->
+      <section class="service-detail" id="data-analytics">
+        <div class="wrap">
+          <div class="service-detail-intro">
+            <img
+              class="service-detail-icon"
+              src="files/icon_data_analytics.svg"
+              alt=""
+              aria-hidden="true"
+              loading="lazy"
+            />
+            <div class="service-detail-num">02</div>
+            <h2>Data Analytics</h2>
+            <p class="service-detail-lede">
+              Turning raw data into decisions; dashboards, models and
+              reporting your team will actually open. We build analytics
+              that match how your business actually makes decisions, not a
+              generic template.
+            </p>
+            <ul class="service-detail-list">
+              <li>Business intelligence dashboards</li>
+              <li>Predictive &amp; statistical modelling</li>
+              <li>Self-serve reporting</li>
+              <li>KPI &amp; metrics frameworks</li>
+            </ul>
+          </div>
+          <div class="discipline-proof">
+            <span class="eyebrow">Alfa-Assets in practice</span>
+            <h3>Turning asset history into decisions.</h3>
+            <p>
+              The executive dashboard isn't a generic chart wall; every
+              metric on it answers a specific operational question: what's
+              the verification rate, where is maintenance cost
+              accelerating, which assets are overdue for replacement. That
+              last one runs on a transparent scoring model combining age,
+              maintenance cost, failure frequency, utilization, warranty
+              status, and business criticality, deliberately explainable
+              rather than a black box, so a finance officer can see why an
+              asset is flagged.
+            </p>
+            <span class="proof-label">What this shows:</span>
+            <ul class="service-detail-list">
+              <li>
+                KPIs chosen for what they let someone decide, not just
+                what's easy to chart
+              </li>
+              <li>
+                A documented, interpretable scoring model instead of an
+                opaque prediction
+              </li>
+              <li>
+                Written analysis alongside the visuals: what the data
+                actually shows, not just how it's displayed
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- DATA ENGINEERING -->
+      <section class="service-detail" id="data-engineering">
+        <div class="wrap">
+          <div class="service-detail-intro">
+            <img
+              class="service-detail-icon"
+              src="files/icon_data_engineering.svg"
+              alt=""
+              aria-hidden="true"
+              loading="lazy"
+            />
+            <div class="service-detail-num">03</div>
+            <h2>Data Engineering</h2>
+            <p class="service-detail-lede">
+              Pipelines and infrastructure that move data reliably, so
+              everything built on top of it can be trusted. We design for
+              the volume and velocity you'll have in two years, not just
+              today.
+            </p>
+            <ul class="service-detail-list">
+              <li>ETL / ELT pipeline design</li>
+              <li>Data warehousing &amp; lakes</li>
+              <li>Real-time streaming</li>
+              <li>Data quality &amp; governance</li>
+            </ul>
+          </div>
+          <div class="discipline-proof">
+            <span class="eyebrow">Alfa-Assets in practice</span>
+            <h3>
+              Getting asset history out of the transactional database and
+              into something you can actually analyze.
+            </h3>
+            <p>
+              The operational database handles transactions. A separate
+              pipeline (dbt models feeding an orchestrated DAG) moves
+              lifecycle events, maintenance records, and verification
+              outcomes into a warehouse built around a star schema: asset,
+              category, location, department, and date as dimensions;
+              transactions, maintenance, and verification as facts.
+            </p>
+            <span class="proof-label">What this shows:</span>
+            <ul class="service-detail-list">
+              <li>A working ELT pipeline, not just a diagram of one</li>
+              <li>
+                A deliberately separated analytical layer, so dashboards
+                never run against production
+              </li>
+              <li>
+                A schema designed to answer real questions (utilization,
+                replacement risk, maintenance cost by site) rather than
+                just mirror the source tables
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ARCHITECTURE -->
+      <section class="service-detail" id="architecture">
+        <div class="wrap">
+          <div class="service-detail-intro">
+            <img
+              class="service-detail-icon"
+              src="files/icon_architecture.svg"
+              alt=""
+              aria-hidden="true"
+              loading="lazy"
+            />
+            <div class="service-detail-num">04</div>
+            <h2>Architecture</h2>
+            <p class="service-detail-lede">
+              System design that holds up under load; documented, deliberate,
+              and built to change without breaking. We map the constraints
+              before we pick a stack.
+            </p>
+            <ul class="service-detail-list">
+              <li>System &amp; solution architecture</li>
+              <li>Legacy modernization</li>
+              <li>Scalability &amp; performance planning</li>
+              <li>Technical documentation</li>
+            </ul>
+          </div>
+          <div class="discipline-proof">
+            <span class="eyebrow">Alfa-Assets in practice</span>
+            <h3>Deciding how the system should be shaped, and why.</h3>
+            <p>
+              The architecture choices are documented as decisions, not
+              defaults. We chose a modular monolith over microservices for
+              the first release and wrote the reasoning down as an ADR. The
+              platform is designed for multi-tenancy from day one, with
+              isolation enforced at the data layer, and for three
+              deployment modes (SaaS, private-cloud, and on-premise) from
+              a single codebase, because the organizations this is built
+              for (banks, hospitals, NGOs) don't all want the same one.
+            </p>
+            <span class="proof-label">What this shows:</span>
+            <ul class="service-detail-list">
+              <li>
+                Architecture Decision Records for the calls that matter
+                (data model, tenancy, deployment)
+              </li>
+              <li>
+                A system designed for offline field use: mobile
+                verification with local queues and conflict resolution,
+                built for real connectivity constraints rather than
+                assumed always-online
+              </li>
+              <li>
+                A clear boundary between operational and analytical
+                workloads
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- CYBERSECURITY -->
+      <section class="service-detail" id="cybersecurity">
+        <div class="wrap">
+          <div class="service-detail-intro">
+            <img
+              class="service-detail-icon"
+              src="files/icon_cybersecurity.svg"
+              alt=""
+              aria-hidden="true"
+              loading="lazy"
+            />
+            <div class="service-detail-num">05</div>
+            <h2>Cybersecurity</h2>
+            <p class="service-detail-lede">
+              Threat modelling, hardening and response; security designed
+              into the system, not bolted on afterward. The same team that
+              builds your systems is the one defending them.
+            </p>
+            <ul class="service-detail-list">
+              <li>Threat modelling &amp; risk assessment</li>
+              <li>Security architecture &amp; hardening</li>
+              <li>Monitoring &amp; incident response</li>
+              <li>Compliance readiness</li>
+            </ul>
+          </div>
+          <div class="discipline-proof">
+            <span class="eyebrow">Alfa-Assets in practice</span>
+            <h3>Making the audit trail trustworthy, not just present.</h3>
+            <p>
+              Every privileged action (an approval, a transfer, a disposal)
+              is written to an append-only, tamper-evident audit log.
+              Access is controlled with OIDC/OAuth2, RBAC, and MFA on
+              sensitive actions, with tenant isolation enforced at the
+              application boundary as well as the data layer. The design
+              started from a short threat model of the highest-risk flows
+              (asset transfer, field verification) before any of it was
+              built.
+            </p>
+            <span class="proof-label">What this shows:</span>
+            <ul class="service-detail-list">
+              <li>A written threat model for the flows that matter most</li>
+              <li>
+                Authentication and access control actually wired into the
+                login and approval paths, not described in a slide
+              </li>
+              <li>Tamper-evident logging that can be independently verified</li>
+              <li>Clean SAST and dependency scans running in CI</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="cta">
+        <svg
+          class="cta-arc"
+          viewBox="0 0 500 500"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+        >
+          <path
+            fill="none"
+            stroke="#F0791C"
+            stroke-width="24"
+            stroke-linecap="round"
+            opacity="0.9"
+            d="M110 200 C 175 55, 400 35, 470 230"
+          />
+          <path
+            fill="none"
+            stroke="#C24E0A"
+            stroke-width="24"
+            stroke-linecap="round"
+            opacity="0.7"
+            d="M155 270 C 220 90, 445 90, 480 310"
+          />
+        </svg>
+        <div class="wrap">
+          <h2>Have a project in one of these areas?</h2>
+          <p class="lede">
+            Tell us what you're building. We'll reply within one working day
+            with next steps, not a sales call.
+          </p>
+          <div class="cta-row">
+            <a href="index.html#contact" class="btn btn-primary btn-lg"
+              >Start a project</a
+            >
+            <a href="mailto:hello@alfajiri.co" class="cta-email"
+              >or email hello@alfajiri.co directly</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site">
+      <div class="wrap">
+        <span class="brand">
+          <span class="brand-mark">
+            <img src="files/alfajiri-logo-transparent.png" alt="Alfajiri" />
+          </span>
+        </span>
+        <nav>
+          <a href="index.html#services">Services</a>
+          <a href="index.html#work">Work</a>
+          <a href="index.html#approach">Approach</a>
+          <a href="about.html">About</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+        <span class="copy"
+          >© 2026 Alfajiri. Software, data &amp; security engineering.</span
+        >
+      </div>
+    </footer>
+
+    <script src="nav.js" defer></script>
+  </body>
+</html>

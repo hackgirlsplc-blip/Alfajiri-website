@@ -19,7 +19,7 @@ body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 16px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -28,7 +28,7 @@ h1,
 h2,
 h3,
 .display {
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Sora", sans-serif;
   font-weight: 600;
   letter-spacing: -0.01em;
   margin: 0;
@@ -86,7 +86,7 @@ header.site {
   display: flex;
   align-items: center;
   gap: 9px;
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Sora", sans-serif;
   font-weight: 700;
   font-size: 22px;
   letter-spacing: -0.01em;
@@ -125,7 +125,7 @@ nav.links a:hover {
   border-radius: 3px;
   font-size: 15px;
   font-weight: 500;
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   cursor: pointer;
   border: 1px solid transparent;
   transition:
@@ -155,6 +155,8 @@ nav.links a:hover {
 }
 .menu-toggle {
   display: none;
+  position: relative;
+  z-index: 60;
   background: none;
   border: none;
   cursor: pointer;
@@ -166,6 +168,18 @@ nav.links a:hover {
   height: 2px;
   background: var(--ink);
   margin: 5px 0;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+header.site.is-open .menu-toggle span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+header.site.is-open .menu-toggle span:nth-child(2) {
+  opacity: 0;
+}
+header.site.is-open .menu-toggle span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
 }
 
 /* ---------- HERO ---------- */
@@ -321,6 +335,30 @@ nav.links a:hover {
   max-width: 42ch;
 }
 
+/* ---------- UTILITY LINKS ---------- */
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 14px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--orange-deep);
+  transition: gap 0.15s ease;
+}
+.text-link:hover {
+  gap: 10px;
+}
+.eyebrow {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--slate);
+  margin-bottom: 14px;
+}
+
 /* ---------- SERVICES ---------- */
 .services {
   padding: 110px 0;
@@ -332,19 +370,26 @@ nav.links a:hover {
   padding: 34px 0;
   border-top: 1px solid var(--line);
   align-items: start;
+  transition: opacity 0.15s ease;
 }
 .service-row:last-child {
   border-bottom: 1px solid var(--line);
 }
-.service-letter {
-  font-family: "Space Grotesk", sans-serif;
-  font-size: 52px;
-  font-weight: 600;
-  color: var(--orange);
+.service-row:hover .service-name {
+  color: var(--orange-deep);
+}
+.service-icon {
+  width: 56px;
+  height: 56px;
   line-height: 1;
 }
+.service-icon img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
 .service-name {
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Sora", sans-serif;
   font-size: 23px;
   font-weight: 600;
   padding-top: 4px;
@@ -361,10 +406,201 @@ nav.links a:hover {
   }
 }
 
+/* ---------- WORK / SHOWCASE ---------- */
+.work {
+  padding: 110px 0;
+  border-top: 1px solid var(--line);
+}
+
+/* Browser-window chrome for real screenshots */
+.frame-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 14px;
+  background: #e7e9ed;
+}
+.frame-bar span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #d3d6db;
+}
+.frame-bar span:nth-child(1) {
+  background: #ff5f57;
+}
+.frame-bar span:nth-child(2) {
+  background: #febc2e;
+}
+.frame-bar span:nth-child(3) {
+  background: #28c840;
+}
+
+/* Flagship case study (index.html #work) */
+.showcase {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 48px;
+  align-items: center;
+}
+.showcase-media {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+  background: #e7e9ed;
+  box-shadow: 0 24px 48px rgba(11, 14, 18, 0.14);
+}
+.showcase-media img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.showcase-body {
+  padding: 0;
+}
+.showcase-body h3 {
+  font-size: clamp(24px, 3vw, 32px);
+  margin: 10px 0 18px;
+  line-height: 1.15;
+}
+.showcase-body > p {
+  color: var(--slate);
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 56ch;
+  margin-bottom: 26px;
+}
+.work-tag {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--orange-deep);
+  margin-bottom: 10px;
+}
+
+/* Alfa-Assets intro (services.html) */
+.alfa-intro {
+  padding: 90px 0 70px;
+}
+.alfa-intro h2 {
+  font-size: clamp(28px, 3.6vw, 40px);
+  margin: 10px 0 22px;
+  max-width: 20ch;
+  line-height: 1.15;
+}
+.alfa-intro > .wrap > p {
+  color: var(--slate);
+  font-size: 17px;
+  line-height: 1.6;
+  max-width: 70ch;
+}
+.alfa-intro > .wrap > p + p {
+  margin-top: 14px;
+}
+.alfa-intro .showcase-media {
+  margin-top: 40px;
+}
+
+/* Discipline proof (services.html, one per section) */
+.discipline-proof {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 28px 30px;
+}
+.discipline-proof h3 {
+  font-size: 19px;
+  margin: 10px 0 12px;
+  line-height: 1.3;
+}
+.discipline-proof > p {
+  font-size: 15px;
+  color: var(--slate);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+.proof-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+
+/* ---------- SIMPLE PAGE HERO (about / services) ---------- */
+.hero--simple .wrap {
+  display: block;
+  max-width: 760px;
+}
+
+/* ---------- SERVICE DETAIL (services.html) ---------- */
+.service-detail {
+  padding: 90px 0;
+  border-top: 1px solid var(--line);
+}
+.service-detail:nth-child(even) {
+  background: var(--dawn);
+}
+.service-detail .wrap {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 56px;
+  align-items: start;
+}
+.service-detail-num {
+  font-family: "Sora", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--orange-deep);
+  margin-bottom: 18px;
+}
+.service-detail-icon {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 22px;
+}
+.service-detail h2 {
+  font-size: clamp(26px, 3.4vw, 36px);
+  margin-bottom: 18px;
+}
+.service-detail-lede {
+  font-size: 17px;
+  color: var(--slate);
+  max-width: 56ch;
+  margin-bottom: 28px;
+}
+.service-detail-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+.service-detail-list li {
+  position: relative;
+  padding-left: 22px;
+  font-size: 15px;
+  color: var(--ink);
+}
+.service-detail-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 8px;
+  height: 2px;
+  background: var(--orange);
+}
+
 /* ---------- APPROACH ---------- */
 .approach {
   padding: 100px 0;
   background: var(--dawn);
+}
+.approach--light {
+  background: var(--paper);
 }
 .approach-grid {
   display: grid;
@@ -378,7 +614,7 @@ nav.links a:hover {
   padding: 34px 28px 40px;
 }
 .step .num {
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Sora", sans-serif;
   font-size: 15px;
   color: var(--orange-deep);
   font-weight: 600;
@@ -395,32 +631,29 @@ nav.links a:hover {
 
 /* ---------- ABOUT / MEANING ---------- */
 .meaning {
-  padding: 120px 0;
+  padding: 160px 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(11, 14, 18, 0.7) 0%,
+      rgba(11, 14, 18, 0.25) 55%,
+      rgba(11, 14, 18, 0) 75%
+    ),
+    url("files/hero_illustration_dark.svg")
+      right center / cover no-repeat;
+  color: #fff;
 }
-.meaning .wrap {
-  display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: 60px;
-  align-items: center;
-}
-.meaning-mark {
-  position: relative;
-  aspect-ratio: 1/1;
-  max-width: 360px;
-}
-.meaning-mark img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  border-radius: 20px;
+.meaning-text {
+  max-width: 640px;
 }
 .meaning-text h2 {
+  color: #fff;
   font-size: clamp(28px, 3.6vw, 40px);
   line-height: 1.12;
   margin-bottom: 26px;
 }
 .meaning-text p {
-  color: var(--slate);
+  color: rgba(255, 255, 255, 0.75);
   font-size: 17px;
   max-width: 56ch;
 }
@@ -428,14 +661,17 @@ nav.links a:hover {
   margin-top: 18px;
 }
 .meaning-text strong {
-  color: var(--ink);
+  color: #fff;
   font-weight: 600;
 }
 
 /* ---------- CTA ---------- */
 .cta {
   padding: 110px 0 120px;
-  background: var(--ink);
+  background:
+    url("files/pattern_lines_dark.svg")
+    repeat;
+  background-size: 160px 160px;
   color: #fff;
   position: relative;
   overflow: hidden;
@@ -519,7 +755,7 @@ nav.links a:hover {
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 4px;
   padding: 12px 14px;
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 15px;
   color: #fff;
   transition: border-color 0.15s ease;
@@ -589,7 +825,28 @@ footer .copy {
 
 /* ---------- RESPONSIVE ---------- */
 @media (max-width: 900px) {
-  nav.links,
+  nav.links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    background: var(--paper);
+    border-bottom: 1px solid var(--line);
+    padding: 4px 32px 12px;
+    box-shadow: 0 12px 24px rgba(11, 14, 18, 0.08);
+  }
+  header.site.is-open nav.links {
+    display: flex;
+  }
+  nav.links a {
+    padding: 14px 0;
+    border-top: 1px solid var(--line);
+    opacity: 1;
+  }
   .nav-cta .btn-ghost {
     display: none;
   }
@@ -601,7 +858,6 @@ footer .copy {
   }
   .hero-art {
     height: 300px;
-    order: -1;
     margin-bottom: 10px;
   }
   .head {
@@ -614,18 +870,24 @@ footer .copy {
   .service-row .service-desc {
     grid-column: 2 / 3;
   }
-  .service-letter {
-    font-size: 38px;
+  .service-icon {
+    width: 44px;
+    height: 44px;
   }
   .approach-grid {
     grid-template-columns: 1fr 1fr;
   }
-  .meaning .wrap {
-    grid-template-columns: 1fr;
+  .meaning {
+    padding: 90px 0;
+    background: var(--ink);
   }
-  .meaning-mark {
-    max-width: 220px;
-    margin: 0 auto;
+  .service-detail .wrap {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .showcase {
+    grid-template-columns: 1fr;
+    gap: 28px;
   }
   .cta-arc {
     display: none;
